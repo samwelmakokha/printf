@@ -81,7 +81,7 @@ int print_non_printed(va_list modes, char buffer[],
 }
 /************************* PRINT REVERSE *************************/
 /**
- * print_reverse - Prints reverse string.
+ * print_rev - Prints reverse string.
  * @modes: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -90,7 +90,7 @@ int print_non_printed(va_list modes, char buffer[],
  * @size: Size specifier
  * Return: Numbers of chars printed
  */
-int print_reverse(va_list modes, char buffer[],
+int print_rev(va_list modes, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char *s;
