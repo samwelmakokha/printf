@@ -28,7 +28,7 @@ int handle_write_char(char c, char buffer[],
 	{
 		buffer[BUFF_SIZE - 1] = '\0';
 		for (j = 0; j < width - 1; j++)
-			buffer[BUFF_SIZE - i - 2] = add;
+			buffer[BUFF_SIZE - j - 2] = add;
 		if (flags & FLAG_MINUS)
 			return (write(1, &buffer[0], 1) +
 					write(1, &buffer[BUFF_SIZE - j - 1], width - 1));
@@ -97,7 +97,7 @@ int write_num(int index, char buffer[],
 	if (precision > 0 && precision < len)
 		add = ' ';
 	while (precision > len)
-		buffer[--index] = '0', leng++;
+		buffer[--index] = '0', len++;
 	if (new_c != 0)
 		len++;
 	if (width > len)
