@@ -26,12 +26,12 @@ int print_pointer(va_list modes, char buffer[],
 		return (write(1, "(nil)", 5));
 	buffer[BUFF_SIZE - 1] = '\0';
 	UNUSED(precision);
-	num_address = (unsigned long)addrs;
+	num_address = (unsigned long)address;
 	while (num_address > 0)
 	{
 		buffer[index--] = associate[num_address % 16];
 		num_address /= 16;
-		leng++;
+		len++;
 	}
 	if ((flags & FLAG_ZERO) && !(flags & FLAG_MINUS))
 		add = '0';
