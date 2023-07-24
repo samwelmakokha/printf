@@ -83,7 +83,7 @@ int print_string(va_list modes, char buffer[],
 int print_percentage(va_list modes, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	UNUSED(types);
+	UNUSED(modes);
 	UNUSED(buffer);
 	UNUSED(flags);
 	UNUSED(width);
@@ -110,7 +110,7 @@ int print_integers(va_list modes, char buffer[],
 	long int m = va_arg(modes, long int);
 	unsigned long int number;
 
-	m = convert_size_num(m, size);
+	m = convert_size_number(m, size);
 	if (m == 0)
 		buffer[j--] = '0';
 	buffer[BUFF_SIZE - 1] = '\0';
