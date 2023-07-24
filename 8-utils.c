@@ -70,6 +70,6 @@ long int convert_size_unsgnd(unsigned long int number, int size)
 	if (size == S_LONG)
 		return (number);
 	else if (size == S_SHORT)
-		return ((unsigned short)num);
+		return ((unsigned short)number);
 	return ((unsigned int)number);
 }
