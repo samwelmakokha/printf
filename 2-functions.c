@@ -36,7 +36,7 @@ int print_pointer(va_list modes, char buffer[],
 	if ((flags & FLAG_ZERO) && !(flags & FLAG_MINUS))
 		add = '0';
 	if (flags & FLAG_PLUS)
-		new_c = '+', leng++;
+		new_c = '+', len++;
 	else if (flags & FLAG_SPACE)
 		new_c = ' ', len++;
 	index++;
