@@ -13,8 +13,8 @@ int get_flags(const char *format, int *n)
 	int a, current_p;
 	int flag = 0;
 	const char FLAGS_CHAR[] = {'-', '+', '0', '#', ' ', '\0'};
-	const int FLAGS_ARRAY[] = {FLAG_MINUS, FLAG_PLUS, FLAG_ZERO, FLAG_HASH, FLAG_S
-		PACE, 0};
+const int FLAGS_ARRAY[] = {FLAG_MINUS, FLAG_PLUS, FLAG_ZERO,
+	FLAG_HASH, FLAG_SPACE, 0};
 
 	for (current_p = *n + 1; format[current_p] != '\0'; current_p++)
 	{
