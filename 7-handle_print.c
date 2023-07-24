@@ -24,7 +24,7 @@ int handle_print(const char *fmt, int *index, va_list args, char buffer[],
 	};
 	for (j = 0; fmt_modes[j].fmt != '\0'; j++)
 		if (fmt[*index] == fmt_modes[j].fmt)
-			return (fmt_modes[j].fn(args, buffer, flags, width, precision, size));
+			return (fmt_modes[j].n(args, buffer, flags, width, precision, size));
 
 	if (fmt_modes[j].fmt == '\0')
 	{
