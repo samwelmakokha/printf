@@ -20,7 +20,7 @@ int handle_print(const char *fmt, int *index, va_list args, char buffer[],
 		{'i', print_integers}, {'d', print_integers}, {'b', print_binary},
 		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
 		{'X', print_hexadec_upper}, {'p', print_pointer}, {'S', print_non_printed},
-		{'r', print_reverse}, {'R', print_stringrot13}, {'\0', NULL}
+		{'r', print_rev}, {'R', print_stringrot13}, {'\0', NULL}
 	};
 	for (j = 0; fmt_modes[j].fmt != '\0'; j++)
 		if (fmt[*index] == fmt_modes[j].fmt)
